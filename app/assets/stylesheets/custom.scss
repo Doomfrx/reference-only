@@ -1,0 +1,153 @@
+@import 'bootstrap';
+
+body{
+    background-color: rgb(243, 243, 243);
+}
+.content {
+    @extend .container;
+}
+header {
+
+    a {
+        text-decoration: none;
+    }
+    .right-nav {
+        display:flex;
+        margin-left: auto;
+        margin-right: 0;
+    }
+
+    .button{
+        padding: 10px;
+        background: rgb(57, 100, 255);
+        color: white;
+        border-radius: 10px;
+        text-decoration: none;
+    }
+    .button:hover {
+        background:white;
+        border: 1px solid rgb(57, 100, 255);
+        color: rgb(57, 100, 255);
+    }
+}
+
+//Sign-ing Log-in forms
+.container {
+    height: 420px;
+    width: 400px;
+    background: white;
+    padding: 20px;
+    border-radius: 6px;
+    align-items: center
+
+    h2{
+        text-align: center;
+    }
+
+    .field {
+        margin: 10px auto;
+    }
+
+    #user_name, #user_email, #user_password, #user_password_confirmation {
+        width: 80%;
+        color: black;
+        padding: 5px;
+    }
+}
+
+//Event list
+
+.event-list {
+    padding: 15px;
+    width: 80%;
+    margin: auto;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 2.5rem;
+
+    .event {
+        height: 300px;
+        background: white;
+        padding: .4em;
+        border-radius: 6px;
+    
+        .event-image {
+            background-color: rgb(236, 236, 236);
+            width: 100%;
+            height: 60%;
+            border-radius: 6px 6px 0 0;
+        }
+          
+        .event-image:hover {
+            transform: scale(0.98);
+        }
+          
+        .event-name{
+            text-transform: uppercase;
+            font-size: 0.9em;
+            font-weight: 600;
+            color: rgb(63, 121, 230);
+            padding: 10px 7px 0;
+        }
+          
+        .event-name:hover {
+            cursor: pointer;
+        }
+          
+        .description {
+            font-weight: 600;
+            color: rgb(88, 87, 87);
+            padding: 7px;
+        }
+          
+        .description:hover {
+            cursor: pointer;
+        }
+          
+        .details {
+            color: gray;
+            font-weight: 400;
+            font-size: 11px;
+            padding-top: 20px;
+        }
+          
+        .date {
+            font-weight: 600;
+        }
+          
+        .date:hover {
+            cursor: pointer;
+        }
+    
+    }
+}
+
+//Create Event
+.event-form{
+    margin:50px auto;
+    padding: 20px;
+    width: 600px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 15px 15px 30px #bebebe,
+                -15px -15px 30px #ffffff;
+
+    h3 {
+        text-align:center;
+        margin-bottom: 20px;
+    }
+
+    #event_name, #event_location, #event_description {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
+        color: black;
+    }
+
+    select {
+        color: black;
+        font-size: 14px;
+        padding: 5px;
+    }
+}
